@@ -1,6 +1,6 @@
 {
-    "initialEpoch": XXXX,
-    "finalEpoch": XXXX,
+    "initialEpoch": (33.15*365.25 + 2*7 + 0 + 7/24)*86400,
+    "finalEpoch": (33.15*365.25 + 2*7 + 0 + 7/24)*86400 + 344*3600,
     "globalFrameOrigin": "Ganymede",
     "globalFrameOrientation": "ECLIPJ2000",
     "spice": {
@@ -30,25 +30,25 @@
                        0
                    ]
                },
-	    XXXX,
-            XXXX
+            "mass": 2000,
+            "referenceArea": 100
         }
     },
     "propagators": [
         {
             "bodiesToPropagate": [
-                XXXX
+                "JUICE"
             ],
             "centralBodies": [
-                XXXX
+                "Ganymede"
             ],
             "accelerations": {
                 "JUICE": {
                     "Ganymede": [
                         {
-                            XXXX,
-                            XXXX,
-                            XXXX		
+                            "maximumDegree": 2,
+                            "maximumOrder": 2,
+                            "type": "sphericalHarmonicGravity"
                         },
                         {
                             "type": "aerodynamic"
